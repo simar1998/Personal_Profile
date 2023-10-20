@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simar's Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <header class="text-center">
+        <img src="img/face.jpg" alt="Avatar" class="rounded-circle" width="150">
+        <h1>Simar Pal Kalsi</h1>
+        <p>Software Developer</p>
+    </header>
+
+    <section class="mt-5">
+        <h2>About Me</h2>
+        <p>I'm Simar Pal Kalsi. I began coding with Visual Basic in grade 8 and later joined the FRC team 1310 RUNNYMEDE ROBOTICS in high school, mastering Java and developing vision-detection robots and mobile logging apps connected to MYSQL databases. Skilled in C++, Java, C#, and Python, I initiated a pilot program at Mech Solution Ltd during my first year at York University, culminating in the launch of Cloud 3D Print. As its CTO for 2 years, I developed backend systems, optimized video streaming, and facilitated partnerships with companies like Kodak and Creality. I also secured a US patent for a 3D communication method and garnered NRC IRAP program support. After resuming my undergrad studies during the pandemic, I interned with Professor Rueben Moller at Emily Carr University, aiding in image analysis projects. My latest work is 'Sculpt Path' in C++, enhancing 3D printing capabilities by analyzing triangulated meshes to allow for non plannar toolpath motion. I wish to get my private pilot's liscnece one day and buy a Cessna 172 Skyhawk.</p>
+    </section>
+
+    <section class="mt-3 text-center">
+        <a href="data/resume.pdf" class="btn btn-primary" download>Download Resume</a>
+    </section>
+
+<section class="mt-5">
+    <h2>Skills & Abilities</h2>
+    <p>I am an experienced Software Development Engineer with a solid history of working in the software industry. Expertise in creating innovative and patented technologies within the additive manufacturing sector, leveraging my proficiency in computational geometry. Specializing in Information Technology.</p>
+
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-header">Software Expertise</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Java</li>
+                <li class="list-group-item">C++</li>
+                <li class="list-group-item">C#</li>
+                <li class="list-group-item">Go (Programming Language)</li>
+                <li class="list-group-item">Python (Programming Language)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Cloud & Systems</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Amazon Web Services (AWS)</li>
+                <li class="list-group-item">Apache Kafka</li>
+                <li class="list-group-item">Amazon S3</li>
+                <li class="list-group-item">Internet Protocol Suite (TCP/IP)</li>
+                <li class="list-group-item">Protocol Buffers</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Specializations</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Computational Geometry</li>
+                <li class="list-group-item">3D Printing Systems</li>
+                <li class="list-group-item">Backend Development</li>
+                <li class="list-group-item">Software Architecture</li>
+                <li class="list-group-item">Data Spectrum Analysis</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="mt-3 text-center">
+        <a href="data/patent.pdf" class="btn btn-primary" download>Download Patent</a>
+    </section>
+
+
+    <blockquote class="blockquote mt-5">
+        <h3>Testimonial</h3>
+        <p>“It is my privilege to work with Simar, a highly skilled and dedicated colleague. His problem-solving abilities, emotional intelligence, and active listening skills significantly contribute to a positive working environment. His communication, adaptability, and teamwork capabilities foster a cooperative atmosphere. I wholeheartedly wish him continued success in his professional career.”</p>
+        <footer class="blockquote-footer">Alex X. Liu, PhD, P. Eng</footer>
+    </blockquote>
+
+</section>
+
+
+<div class="container mt-5">
+    <section class="mt-5">
+        <h2>Gallery</h2>
+
+        <div id="gallery-container">
+            <img src="img/team1310.jpg" alt="Image 1" class="active">  
+            <img src="img/printer.jpg" alt="Image 2">
+            <img src="img/skyhawk.jpg" alt="Image 3">
+
+            <button id="left-arrow" class="arrow-button">&#10094;</button> 
+            <button id="right-arrow" class="arrow-button">&#10095;</button> 
+        </div>
+    </section>
+
+    <script>
+        const images = document.querySelectorAll('#gallery-container img');
+        let currentImageIndex = 0; 
+
+        document.getElementById('left-arrow').addEventListener('click', () => {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;  
+            images[currentImageIndex].classList.add('active');
+        });
+
+        document.getElementById('right-arrow').addEventListener('click', () => {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % images.length; 
+            images[currentImageIndex].classList.add('active');
+        });
+    </script>
+
+</div>
+
+    <section class="mt-5">
+        <h2>Connect with me</h2>
+        <a href="https://www.linkedin.com/in/simar-k-058a15108/">
+            <img src="img/linkedin.webp" alt="LinkedIn" width="20"> LinkedIn
+        </a> | 
+        <a href="https://twitter.com/simtpal">
+            <img src="img/x.png" alt="Twitter" width="20"> Twitter
+        </a> | 
+        <a href="https://github.com/simar1998">
+            <img src="img/git.jpeg" alt="GitHub" width="20"> GitHub
+        </a>
+        <a href="https://cloud3dprint.com/">
+            <img src="img/c3pd.png" alt="Cloud 3D Print" width="20"> Cloud 3D Print
+        </a>
+    </section>
+
+    <section class="mt-5">
+        <h2>Contact</h2>
+        <p>Email: sim@vyotechnologies.com</p>
+    </section>
+
+    <section class="mt-5">
+        <h2>Contact Me</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Please enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Please enter your email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+</div>
+
+</body>
+</html>

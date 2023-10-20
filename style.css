@@ -1,0 +1,89 @@
+body {
+    background-color: #212121; 
+    color: #f2f2f2; 
+}
+a {
+    color: #FF4136; 
+}
+a:hover {
+    color: #FFD700; 
+}
+.btn-primary {
+    background-color: #FF4136; 
+    border-color: #FF4136;
+}
+.btn-primary:hover {
+    background-color: #E50D00; 
+    border-color: #E50D00;
+}
+.card {
+    background-color: #333333; 
+}
+.card-header {
+    background-color: #FF4136; 
+    color: #f2f2f2;
+}
+.list-group-item {
+    border: none;
+    background-color: #333333; 
+}
+.top-header {
+    background-color: red;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+.card {
+    margin-bottom: 20px;
+}
+header {
+    padding: 20px 0;
+}
+footer {
+    padding: 20px 0;
+}
+
+#gallery-container {
+    position: relative;
+    width: 80vw; 
+    height: 60vh; 
+    overflow: hidden;
+    border: 2px solid #FF4136;
+}
+
+#gallery-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: none;
+}
+
+#gallery-container img.active {
+    display: block;
+}
+
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 2rem;
+    width: 40px; 
+    height: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#left-arrow {
+    left: 10px;
+}
+
+#right-arrow {
+    right: 10px;
+}
